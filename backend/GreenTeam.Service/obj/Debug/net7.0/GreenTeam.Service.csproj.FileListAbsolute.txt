@@ -1,0 +1,17 @@
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\bin\Debug\net7.0\GreenTeam.Service.deps.json
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\bin\Debug\net7.0\GreenTeam.Service.dll
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\bin\Debug\net7.0\GreenTeam.Service.pdb
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\bin\Debug\net7.0\GreenTeam.DAL.dll
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\bin\Debug\net7.0\GreenTeam.Model.dll
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\bin\Debug\net7.0\GreenTeam.DAL.pdb
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\bin\Debug\net7.0\GreenTeam.Model.pdb
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\obj\Debug\net7.0\GreenTeam.Service.csproj.AssemblyReference.cache
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\obj\Debug\net7.0\GreenTeam.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\obj\Debug\net7.0\GreenTeam.Service.AssemblyInfoInputs.cache
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\obj\Debug\net7.0\GreenTeam.Service.AssemblyInfo.cs
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\obj\Debug\net7.0\GreenTeam.Service.csproj.CoreCompileInputs.cache
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\obj\Debug\net7.0\GreenTeam.Service.csproj.CopyComplete
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\obj\Debug\net7.0\GreenTeam.Service.dll
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\obj\Debug\net7.0\refint\GreenTeam.Service.dll
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\obj\Debug\net7.0\GreenTeam.Service.pdb
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Service\obj\Debug\net7.0\ref\GreenTeam.Service.dll

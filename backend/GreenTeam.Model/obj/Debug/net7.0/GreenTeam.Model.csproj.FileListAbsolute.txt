@@ -1,0 +1,11 @@
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Model\bin\Debug\net7.0\GreenTeam.Model.deps.json
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Model\bin\Debug\net7.0\GreenTeam.Model.dll
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Model\bin\Debug\net7.0\GreenTeam.Model.pdb
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Model\obj\Debug\net7.0\GreenTeam.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Model\obj\Debug\net7.0\GreenTeam.Model.AssemblyInfoInputs.cache
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Model\obj\Debug\net7.0\GreenTeam.Model.AssemblyInfo.cs
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Model\obj\Debug\net7.0\GreenTeam.Model.csproj.CoreCompileInputs.cache
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Model\obj\Debug\net7.0\GreenTeam.Model.dll
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Model\obj\Debug\net7.0\refint\GreenTeam.Model.dll
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Model\obj\Debug\net7.0\GreenTeam.Model.pdb
+C:\Users\димон\source\repos\GreenTeam\GreenTeam.Model\obj\Debug\net7.0\ref\GreenTeam.Model.dll
