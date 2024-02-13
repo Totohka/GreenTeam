@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenTeam.API.Product", "GreenTeam\GreenTeam.API.Product.csproj", "{A7955A40-5196-42DC-9F62-AAFCF570654B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreenTeam.API.Product", "GreenTeam\GreenTeam.API.Product.csproj", "{A7955A40-5196-42DC-9F62-AAFCF570654B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenTeam.Model", "GreenTeam.Model\GreenTeam.Model.csproj", "{BF94E8F3-7A1D-4821-9D09-5BB0BC7823A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreenTeam.Model", "GreenTeam.Model\GreenTeam.Model.csproj", "{BF94E8F3-7A1D-4821-9D09-5BB0BC7823A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenTeam.DAL", "GreenTeam.DAL\GreenTeam.DAL.csproj", "{43E5EFDF-3CBF-4F9E-9273-E92335128FE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreenTeam.DAL", "GreenTeam.DAL\GreenTeam.DAL.csproj", "{43E5EFDF-3CBF-4F9E-9273-E92335128FE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenTeam.Service", "GreenTeam.Service\GreenTeam.Service.csproj", "{8424295E-585D-4EEE-A264-20EB73455979}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreenTeam.Service", "GreenTeam.Service\GreenTeam.Service.csproj", "{8424295E-585D-4EEE-A264-20EB73455979}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{697F9A0A-579A-4EBD-8961-0E7134835CD7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{1C3B0886-3CC6-4C9C-9167-0BBE06726522}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenTeam.API.User", "GreenTeam.API.User\GreenTeam.API.User.csproj", "{44233325-B8F6-47DF-A06A-61EE4959F91E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{8424295E-585D-4EEE-A264-20EB73455979}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8424295E-585D-4EEE-A264-20EB73455979}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8424295E-585D-4EEE-A264-20EB73455979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44233325-B8F6-47DF-A06A-61EE4959F91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44233325-B8F6-47DF-A06A-61EE4959F91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44233325-B8F6-47DF-A06A-61EE4959F91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44233325-B8F6-47DF-A06A-61EE4959F91E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{BF94E8F3-7A1D-4821-9D09-5BB0BC7823A6} = {697F9A0A-579A-4EBD-8961-0E7134835CD7}
 		{43E5EFDF-3CBF-4F9E-9273-E92335128FE2} = {697F9A0A-579A-4EBD-8961-0E7134835CD7}
 		{8424295E-585D-4EEE-A264-20EB73455979} = {697F9A0A-579A-4EBD-8961-0E7134835CD7}
+		{44233325-B8F6-47DF-A06A-61EE4959F91E} = {1C3B0886-3CC6-4C9C-9167-0BBE06726522}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21EBD5CD-74E5-49AD-AB41-07022F5862C2}
