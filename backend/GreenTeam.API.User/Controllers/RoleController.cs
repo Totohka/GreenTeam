@@ -18,28 +18,28 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
         [HttpGet]
         public async Task<Role> Get(int id)
         {
-            var product = await _roleService.Get(id);
-            return product;
+            var role = await _roleService.Get(id);
+            return role;
         }
 
         [HttpGet("all")]
         public async Task<List<Role>> GetAll()
         {
-            var products = await _roleService.GetAll();
-            return products;
+            var roles = await _roleService.GetAll();
+            return roles;
         }
 
         [HttpPost]
-        public OkResult Create(Role product)
+        public OkResult Create(Role role)
         {
-            _roleService.Create(product);
+            _roleService.Create(role);
             return Ok();
         }
 
         [HttpPut]
-        public OkResult Update(Role product)
+        public OkResult Update(Role role)
         {
-            _roleService.Update(product);
+            _roleService.Update(role);
             return Ok();
         }
 

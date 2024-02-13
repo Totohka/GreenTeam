@@ -11,7 +11,6 @@ namespace GreenTeam.DAL
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Role> Roles { get; set; }
-        public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Cheque> Cheques { get; set; }
         public DbSet<ChequeProduct> ChequeProducts { get; set; }
@@ -27,7 +26,6 @@ namespace GreenTeam.DAL
             modelBuilder.Entity<Category>(CategoryConfigure);
             modelBuilder.Entity<Product>(ProductConfigure);
             modelBuilder.Entity<Role>(RoleConfigure);
-            modelBuilder.Entity<UserRole>(UserRoleConfigure);
             modelBuilder.Entity<User>(UserConfigure);
             modelBuilder.Entity<Cheque>(ChequeConfigure);
             modelBuilder.Entity<ChequeProduct>(ChequeProductConfigure);
