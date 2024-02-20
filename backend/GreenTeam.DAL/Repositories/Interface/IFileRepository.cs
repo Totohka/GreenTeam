@@ -11,10 +11,10 @@ namespace GreenTeam.DAL.Repositories.Interface
 {
     public interface IFileRepository
     {
-        Task<Cheque> Get(int id);
-        Task<List<Cheque>> GetAll();
-        void Create(IFormFile file, string path, int chequeId);
-        void Update(ChequeCreateViewModel item);
-        Task Delete(int id);
+        Task<string> Get(int chequeId);
+        Task<List<string>> GetByUserId(int userId);
+        void Create(IFormFile file, int userId, int chequeId);
+        void Update(IFormFile file, int userId, int chequeId);
+        void Delete(int userId, int chequeId);
     }
 }

@@ -22,21 +22,26 @@ namespace Goods.System.Social.Network.DAL.Repository.Realization
             db.SaveChanges();
         }
 
-        public Task Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Cheque GetByUserId(int userId)
+        public async void Delete(int id)
         {
             using var db = _contextFactory.CreateDbContext();
-            var cheque = db.Cheques.Where(c => c.UserId == userId).ToList().Last();
+            var cheque = await Get(id);
+            db.Cheques.Remove(cheque);
+            db.SaveChanges();
+        }
+
+        public async Task<List<Cheque>> GetByUserId(int userId)
+        {
+            using var db = _contextFactory.CreateDbContext();
+            var cheque = await db.Cheques.Where(c => c.UserId == userId).ToListAsync();
             return cheque;
         }
 
-        public Task<List<Cheque>> GetAll()
+        public async Task<Cheque> Get(int chequeId)
         {
-            throw new NotImplementedException();
+            using var db = _contextFactory.CreateDbContext();
+            var cheque = await db.Cheques.FindAsync(chequeId);
+            return cheque;
         }
 
         public void Update(Cheque item)

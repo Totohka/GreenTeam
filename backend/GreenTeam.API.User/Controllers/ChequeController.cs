@@ -19,28 +19,28 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
         [HttpGet]
         public async Task<Cheque> Get(int id)
         {
-            var role = await _chequeService.Get(id);
-            return role;
+            var cheque = await _chequeService.Get(id);
+            return cheque;
         }
 
         [HttpGet("all")]
-        public async Task<List<Cheque>> GetAll()
+        public async Task<List<Cheque>> GetByUserId(int userId)
         {
-            var roles = await _chequeService.GetAll();
-            return roles;
+            var cheques = await _chequeService.GetByUserId(userId);
+            return cheques;
         }
 
         [HttpPost]
-        public OkResult Create([FromForm] ChequeCreateViewModel chequeCreateViewModel)
+        public OkResult Create(Cheque cheque)
         {
-            _chequeService.Create(chequeCreateViewModel);
+            _chequeService.Create(cheque);
             return Ok();
         }
 
         [HttpPut]
-        public OkResult Update([FromForm] ChequeCreateViewModel chequeCreateViewModel)
+        public OkResult Update(Cheque cheque)
         {
-            _chequeService.Update(chequeCreateViewModel);
+            _chequeService.Update(cheque);
             return Ok();
         }
 

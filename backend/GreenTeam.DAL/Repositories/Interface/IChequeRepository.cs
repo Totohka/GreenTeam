@@ -10,10 +10,10 @@ namespace GreenTeam.DAL.Repositories.Interface
 {
     public interface IChequeRepository
     {
-        Cheque GetByUserId(int userId);
-        Task<List<Cheque>> GetAll();
+        Task<List<Cheque>> GetByUserId(int userId);
+        Task<Cheque> Get(int chequeId);
         void Create(Cheque item);
         void Update(Cheque item);
-        Task Delete(int id);
+        void Delete(int id);
     }
 }

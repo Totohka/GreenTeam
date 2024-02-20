@@ -2,58 +2,40 @@
 using GreenTeam.Model.Entities;
 using GreenTeam.Model.ViewModel;
 using GreenTeam.Service.Interface;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GreenTeam.Service.Realization
 {
     public class ChequeService : IChequeService
     {
         private readonly IChequeRepository _chequeRepository;
-        private readonly IFileRepository _fileRepository;
 
-        public ChequeService(IChequeRepository chequeRepository,
-                             IFileRepository fileRepository) {
+        public ChequeService(IChequeRepository chequeRepository) {
             _chequeRepository = chequeRepository;
-            _fileRepository = fileRepository;
         }
 
-        public void Create(ChequeCreateViewModel chequeCreateViewModel)
+        public void Create(Cheque cheque)
         {
-            Cheque cheque = new Cheque()
-            {
-                UserId = chequeCreateViewModel.User_id,
-                Path = chequeCreateViewModel.User_id.ToString()
-            };
             _chequeRepository.Create(cheque);
-            cheque = _chequeRepository.GetByUserId(cheque.UserId);
-            cheque.Path += "/" + cheque.Id.ToString();
-            _fileRepository.Create(chequeCreateViewModel.File, chequeCreateViewModel.User_id.ToString(), cheque.Id);
-            _chequeRepository.Update(cheque);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            _chequeRepository.Delete(id);
         }
 
-        public Task<Cheque> Get(int id)
+        public async Task<Cheque> Get(int id)
         {
-            throw new NotImplementedException();
+            return await _chequeRepository.Get(id);
         }
 
-        public Task<List<Cheque>> GetAll()
+        public Task<List<Cheque>> GetByUserId(int userId)
         {
-            throw new NotImplementedException();
+            return _chequeRepository.GetByUserId(userId);
         }
 
-        public void Update(ChequeCreateViewModel chequeCreateViewModel)
+        public void Update(Cheque cheque)
         {
-            throw new NotImplementedException();
+            _chequeRepository.Update(cheque);
         }
     }
 }

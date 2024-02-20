@@ -16,10 +16,10 @@ namespace Goods.System.Social.Network.DAL.Repository.Realization
             _contextFactory = dbContextFactory;
         }
 
-        public async void Create(IFormFile file, string path, int chequeId)
+        public async void Create(IFormFile file, int userId, int chequeId)
         {
             using var db = _contextFactory.CreateDbContext();
-            var uploadPath = $"{Directory.GetCurrentDirectory()}/Cheques/{path}";
+            var uploadPath = $"{Directory.GetCurrentDirectory()}/Cheques/{userId}";
             if (!Directory.Exists(uploadPath))
             {
                 Directory.CreateDirectory(uploadPath);
@@ -31,22 +31,22 @@ namespace Goods.System.Social.Network.DAL.Repository.Realization
             }
         }
 
-        public Task Delete(int id)
+        public void Delete(int userId, int chequeId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Cheque> Get(int id)
+        public Task<string> Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<Cheque>> GetAll()
+        public Task<List<string>> GetByUserId(int userId)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(ChequeCreateViewModel item)
+        public void Update(IFormFile file, int userId, int chequeId)
         {
             throw new NotImplementedException();
         }

@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace GreenTeam.Model.ViewModel
 {
-    public class ChequeCreateViewModel
+    public class FileCreateViewModel
     {
         public required IFormFile File { get; set; }
         public int User_id { get; set; }
+        public int Cheque_id { get; set;}
     }
 }
