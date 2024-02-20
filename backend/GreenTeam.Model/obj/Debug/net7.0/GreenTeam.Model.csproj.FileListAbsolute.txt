@@ -20,3 +20,4 @@ C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTe
 C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.Model\obj\Debug\net7.0\refint\GreenTeam.Model.dll
 C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.Model\obj\Debug\net7.0\GreenTeam.Model.pdb
 C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.Model\obj\Debug\net7.0\ref\GreenTeam.Model.dll
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.Model\obj\Debug\net7.0\GreenTeam.Model.csproj.AssemblyReference.cache

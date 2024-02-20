@@ -75,3 +75,8 @@ C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTe
 C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.API.User\obj\Debug\net7.0\GreenTeam.API.User.pdb
 C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.API.User\obj\Debug\net7.0\GreenTeam.API.User.genruntimeconfig.cache
 C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.API.User\obj\Debug\net7.0\ref\GreenTeam.API.User.dll
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.API.User\bin\Debug\net7.0\Humanizer.dll
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.API.User\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.API.User\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.API.User\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.API.User\bin\Debug\net7.0\System.CodeDom.dll

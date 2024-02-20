@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "CU/iOFnzoj0AzeTyw5+w0kbvwyzSjKoLNSVr/SC3P+WJPaepL1h+lvt4dxemaeAQxPwPAQkItL8i8Z7vFWsGyA==",
+  "dgSpecHash": "Rv9eOcgPBET9CNkabulUIZpahLTfFfiR4aBtFrr7CH92PKUr6kuaZI9Gfbgr2K+xj6EbYsCjC9lgK9mT6/VQHQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\димон\\Desktop\\Я\\учёба\\repGreenTeam\\GreenTeam\\backend\\GreenTeam.DAL\\GreenTeam.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\димон\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\димон\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\димон\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\димон\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\димон\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\димон\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\димон\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
@@ -47,6 +48,7 @@
     "C:\\Users\\димон\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\димон\\.nuget\\packages\\system.formats.asn1\\5.0.0\\system.formats.asn1.5.0.0.nupkg.sha512",
     "C:\\Users\\димон\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.24.0\\system.identitymodel.tokens.jwt.6.24.0.nupkg.sha512",
+    "C:\\Users\\димон\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
     "C:\\Users\\димон\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\димон\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\димон\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

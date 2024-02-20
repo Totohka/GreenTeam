@@ -5,6 +5,7 @@ using GreenTeam.Model.Entities;
 using GreenTeam.Service.Interface;
 using GreenTeam.Service.Realization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +15,11 @@ builder.Services.AddDbContext<ShopContext>(options =>
 builder.Services.AddDbContextFactory<ShopContext>();
 builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IChequeService, ChequeService>();
 builder.Services.AddScoped<IRepository<Role>, Repository<Role>>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IChequeRepository, ChequeRepository>();
+builder.Services.AddScoped<IFileRepository, FileRepository>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -31,9 +35,15 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 app.UseAuthorization();
-
+app.UseFileServer(new FileServerOptions
+{
+    FileProvider = new PhysicalFileProvider(
+           Path.Combine(builder.Environment.ContentRootPath, "Cheques")),
+    RequestPath = "/Cheques",
+    EnableDirectoryBrowsing = true,
+});
 app.MapControllers();
 
 app.Run();

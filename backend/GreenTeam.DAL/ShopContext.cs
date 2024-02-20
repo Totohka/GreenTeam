@@ -71,6 +71,7 @@ namespace GreenTeam.DAL
         public void ChequeConfigure(EntityTypeBuilder<Cheque> builder)
         {
             builder.HasKey(p => p.Id);
+            builder.Property(p => p.Path).IsRequired().HasMaxLength(50);
             builder.Property(p => p.UserId).IsRequired();
         }
         public void ChequeProductConfigure(EntityTypeBuilder<ChequeProduct> builder)
