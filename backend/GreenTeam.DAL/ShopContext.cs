@@ -1,7 +1,6 @@
 ﻿using GreenTeam.Model.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System.Data;
 
 namespace GreenTeam.DAL
 {

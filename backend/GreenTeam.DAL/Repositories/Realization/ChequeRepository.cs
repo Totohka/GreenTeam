@@ -1,7 +1,6 @@
 ﻿using GreenTeam.DAL;
 using GreenTeam.DAL.Repositories.Interface;
 using GreenTeam.Model.Entities;
-using GreenTeam.Model.ViewModel;
 using Microsoft.EntityFrameworkCore;
 
 namespace Goods.System.Social.Network.DAL.Repository.Realization

@@ -1,8 +1,6 @@
 using GreenTeam.Model.Entities;
-using GreenTeam.Model.ViewModel;
 using GreenTeam.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
 
 namespace Goods.System.Social.Network.Microservice.Posts.Controllers
 {

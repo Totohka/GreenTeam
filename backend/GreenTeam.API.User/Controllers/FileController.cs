@@ -1,8 +1,6 @@
-using GreenTeam.Model.Entities;
 using GreenTeam.Model.ViewModel;
 using GreenTeam.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
 
 namespace Goods.System.Social.Network.Microservice.Posts.Controllers
 {
@@ -24,9 +22,9 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
         }
 
         [HttpGet("all")]
-        public async Task<List<string>> GetByUserId(int userId)
+        public List<string> GetByUserId(int userId)
         {
-            var paths = await _fileService.GetByUserId(userId);
+            var paths = _fileService.GetByUserId(userId);
             return paths;
         }
 

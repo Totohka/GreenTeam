@@ -1,7 +1,5 @@
 ﻿using GreenTeam.DAL;
 using GreenTeam.DAL.Repositories.Interface;
-using GreenTeam.Model.Entities;
-using GreenTeam.Model.ViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,7 +16,6 @@ namespace Goods.System.Social.Network.DAL.Repository.Realization
 
         public async void Create(IFormFile file, int userId, int chequeId)
         {
-            using var db = _contextFactory.CreateDbContext();
             var uploadPath = $"{Directory.GetCurrentDirectory()}/Cheques/{userId}";
             if (!Directory.Exists(uploadPath))
             {
@@ -31,24 +28,39 @@ namespace Goods.System.Social.Network.DAL.Repository.Realization
             }
         }
 
-        public void Delete(int userId, int chequeId)
+        public void Delete(int chequeId, int userId)
         {
-            throw new NotImplementedException();
+            string fullPath = $"{Directory.GetCurrentDirectory()}/Cheques/{userId}/{chequeId}.pdf";
+            if (File.Exists(fullPath))
+            {
+                File.Delete(fullPath);
+            }
         }
 
-        public Task<string> Get(int id)
+        public async Task<string> Get(int id)
         {
-            throw new NotImplementedException();
+            using var db = _contextFactory.CreateDbContext();
+            var cheque = await db.Cheques.FindAsync(id);
+            return $"{cheque.UserId}/{id}.pdf";
         }
 
-        public Task<List<string>> GetByUserId(int userId)
+        public List<string> GetByUserId(int userId)
         {
-            throw new NotImplementedException();
-        }
+            string path = $"{Directory.GetCurrentDirectory()}/Cheques/{userId}";
+            var paths = Directory.GetFiles(path, "*", SearchOption.AllDirectories).ToList();
+            for (int i = 0; i < paths.Count; i++)
+            {
+                paths[i] = paths[i][(paths[i].LastIndexOf('/') + 1)..];
+                var oldString = "\\";
+                paths[i] = paths[i].Replace(oldString, "/");
+            }
+            return paths;
+        }   
 
         public void Update(IFormFile file, int userId, int chequeId)
         {
-            throw new NotImplementedException();
+            Delete(chequeId, userId);
+            Create(file, userId, chequeId);
         }
     }
 }

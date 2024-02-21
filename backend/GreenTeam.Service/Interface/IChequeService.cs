@@ -1,10 +1,4 @@
 ﻿using GreenTeam.Model.Entities;
-using GreenTeam.Model.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GreenTeam.Service.Interface
 {

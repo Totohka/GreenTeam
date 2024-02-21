@@ -16,6 +16,7 @@ builder.Services.AddDbContextFactory<ShopContext>();
 builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IChequeService, ChequeService>();
+builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IRepository<Role>, Repository<Role>>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IChequeRepository, ChequeRepository>();

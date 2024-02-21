@@ -1,5 +1,4 @@
 ﻿using GreenTeam.DAL.Repositories.Interface;
-using GreenTeam.Model.Entities;
 using GreenTeam.Model.ViewModel;
 using GreenTeam.Service.Interface;
 
@@ -28,9 +27,9 @@ namespace GreenTeam.Service.Realization
             return await _fileRepository.Get(id);
         }
 
-        public async Task<List<string>> GetByUserId(int userId)
+        public List<string> GetByUserId(int userId)
         {
-            return await _fileRepository.GetByUserId(userId);
+            return _fileRepository.GetByUserId(userId);
         }
 
         public void Update(FileCreateViewModel fileCreateViewModel)
