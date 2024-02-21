@@ -4,6 +4,7 @@ namespace GreenTeam.Model.Entities
     public class Product
     {
         public int Id { get; set; }
+        public string Path { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public int Amount { get; set; }

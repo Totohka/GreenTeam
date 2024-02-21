@@ -5,6 +5,7 @@ using GreenTeam.Model.Entities;
 using GreenTeam.Service.Interface;
 using GreenTeam.Service.Realization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,8 @@ builder.Services.AddDbContextFactory<ShopContext>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ISupplierService, SupplierService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IImageService, ImageService>();
+builder.Services.AddScoped<IImageRepository, ImageRepository>();
 builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
 builder.Services.AddScoped<IRepository<Supplier>, Repository<Supplier>>();
 builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
@@ -35,7 +38,13 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
+app.UseFileServer(new FileServerOptions
+{
+    FileProvider = new PhysicalFileProvider(
+           Path.Combine(builder.Environment.ContentRootPath, "Products")),
+    RequestPath = "/Products",
+    EnableDirectoryBrowsing = true,
+});
 app.MapControllers();
 
 app.Run();
