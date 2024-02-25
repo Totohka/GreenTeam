@@ -1,5 +1,6 @@
 using GreenTeam.Model.ViewModel;
 using GreenTeam.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Goods.System.Social.Network.Microservice.Posts.Controllers
@@ -14,6 +15,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             _fileService = fileService;
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<string> Get(int id)
         {
@@ -21,6 +23,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return path;
         }
 
+        [Authorize]
         [HttpGet("all")]
         public List<string> GetByUserId(int userId)
         {
@@ -28,6 +31,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return paths;
         }
 
+        [Authorize(Roles = "1C")]
         [HttpPost]
         public OkResult Create([FromForm] FileCreateViewModel fileCreateViewModel)
         {
@@ -35,6 +39,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return Ok();
         }
 
+        [Authorize(Roles = "1C")]
         [HttpPut]
         public OkResult Update([FromForm] FileCreateViewModel fileCreateViewModel)
         {
@@ -42,6 +47,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return Ok();
         }
 
+        [Authorize(Roles = "1C")]
         [HttpDelete]
         public OkResult Delete(int chequeId, int userId)
         {

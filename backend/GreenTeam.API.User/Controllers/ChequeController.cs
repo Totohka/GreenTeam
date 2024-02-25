@@ -1,5 +1,6 @@
 using GreenTeam.Model.Entities;
 using GreenTeam.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Goods.System.Social.Network.Microservice.Posts.Controllers
@@ -14,6 +15,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             _chequeService = chequeService;
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<Cheque> Get(int id)
         {
@@ -21,6 +23,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return cheque;
         }
 
+        [Authorize]
         [HttpGet("all")]
         public async Task<List<Cheque>> GetByUserId(int userId)
         {
@@ -28,6 +31,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return cheques;
         }
 
+        [Authorize]
         [HttpPost]
         public OkResult Create(Cheque cheque)
         {
@@ -35,6 +39,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return Ok();
         }
 
+        [Authorize(Roles = "1C")]
         [HttpPut]
         public OkResult Update(Cheque cheque)
         {
@@ -42,6 +47,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return Ok();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public OkResult Delete(int id)
         {

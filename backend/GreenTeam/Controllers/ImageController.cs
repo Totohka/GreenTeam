@@ -1,5 +1,6 @@
 using GreenTeam.Model.ViewModel;
 using GreenTeam.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Goods.System.Social.Network.Microservice.Posts.Controllers
@@ -28,6 +29,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return paths;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public OkResult Create([FromForm] ImageCreateViewModel imageCreateViewModel)
         {
@@ -35,6 +37,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return Ok();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public OkResult Update([FromForm] ImageCreateViewModel imageCreateViewModel)
         {
@@ -42,6 +45,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return Ok();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public OkResult Delete(int productId)
         {

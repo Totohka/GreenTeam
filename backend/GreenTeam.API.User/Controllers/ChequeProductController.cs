@@ -42,6 +42,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return Ok();
         }
 
+
         [HttpDelete]
         public OkResult Delete(int id)
         {

@@ -1,5 +1,6 @@
 using GreenTeam.Model.Entities;
 using GreenTeam.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
 
@@ -15,6 +16,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             _userService = userService;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public User Get(int id)
         {
@@ -22,6 +24,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return user;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet("all")]
         public async Task<List<User>> GetAll()
         {
@@ -29,6 +32,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return users;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public OkResult Create(User user, int roleId)
         {
@@ -36,6 +40,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return Ok();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public OkResult Update(User user, int roleId)
         {
@@ -43,6 +48,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return Ok();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public OkResult Delete(int id)
         {

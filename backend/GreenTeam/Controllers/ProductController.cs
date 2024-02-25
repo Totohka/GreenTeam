@@ -1,5 +1,6 @@
 using GreenTeam.Model.Entities;
 using GreenTeam.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Goods.System.Social.Network.Microservice.Posts.Controllers
@@ -28,6 +29,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return products;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public OkResult Create(Product product)
         {
@@ -35,6 +37,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return Ok();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public OkResult Update(Product product)
         {
@@ -42,6 +45,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return Ok();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public OkResult Delete(int id)
         {
