@@ -15,7 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{697F9A0A-5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{1C3B0886-3CC6-4C9C-9167-0BBE06726522}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenTeam.API.User", "GreenTeam.API.User\GreenTeam.API.User.csproj", "{44233325-B8F6-47DF-A06A-61EE4959F91E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreenTeam.API.User", "GreenTeam.API.User\GreenTeam.API.User.csproj", "{44233325-B8F6-47DF-A06A-61EE4959F91E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testProjectPaid", "testProjectPaid\testProjectPaid.csproj", "{CCF59699-B797-45CE-B758-617396DEF421}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{44233325-B8F6-47DF-A06A-61EE4959F91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44233325-B8F6-47DF-A06A-61EE4959F91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44233325-B8F6-47DF-A06A-61EE4959F91E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCF59699-B797-45CE-B758-617396DEF421}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF59699-B797-45CE-B758-617396DEF421}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF59699-B797-45CE-B758-617396DEF421}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF59699-B797-45CE-B758-617396DEF421}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{43E5EFDF-3CBF-4F9E-9273-E92335128FE2} = {697F9A0A-579A-4EBD-8961-0E7134835CD7}
 		{8424295E-585D-4EEE-A264-20EB73455979} = {697F9A0A-579A-4EBD-8961-0E7134835CD7}
 		{44233325-B8F6-47DF-A06A-61EE4959F91E} = {1C3B0886-3CC6-4C9C-9167-0BBE06726522}
+		{CCF59699-B797-45CE-B758-617396DEF421} = {1C3B0886-3CC6-4C9C-9167-0BBE06726522}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21EBD5CD-74E5-49AD-AB41-07022F5862C2}
