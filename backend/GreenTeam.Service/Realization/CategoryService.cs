@@ -1,11 +1,6 @@
 ﻿using GreenTeam.DAL.Repositories.Interface;
 using GreenTeam.Model.Entities;
 using GreenTeam.Service.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GreenTeam.Service.Realization
 {

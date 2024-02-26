@@ -1,7 +1,6 @@
 ﻿using GreenTeam.Model.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System.Data;
 
 namespace GreenTeam.DAL
 {
@@ -42,6 +41,7 @@ namespace GreenTeam.DAL
             builder.HasKey(p => p.Id);
             builder.Property(p => p.Name).IsRequired().HasMaxLength(50);
             builder.Property(p => p.Description).IsRequired().HasMaxLength(200);
+            builder.Property(p => p.Path).IsRequired().HasMaxLength(50);
             builder.Property(p => p.Amount).IsRequired();
             builder.Property(p => p.SupplierId).IsRequired();
             builder.Property(p => p.CategoryId).IsRequired();
@@ -71,6 +71,8 @@ namespace GreenTeam.DAL
         public void ChequeConfigure(EntityTypeBuilder<Cheque> builder)
         {
             builder.HasKey(p => p.Id);
+            builder.Property(p => p.Date).IsRequired();
+            builder.Property(p => p.Path).IsRequired().HasMaxLength(50);
             builder.Property(p => p.UserId).IsRequired();
         }
         public void ChequeProductConfigure(EntityTypeBuilder<ChequeProduct> builder)
