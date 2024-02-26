@@ -2,6 +2,9 @@
 using GreenTeam.DAL.Repositories.Interface;
 using GreenTeam.Model.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography;
+using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Goods.System.Social.Network.DAL.Repository.Realization
 {
@@ -34,6 +37,9 @@ namespace Goods.System.Social.Network.DAL.Repository.Realization
         {
             using var db = _contextFactory.CreateDbContext();
             role = db.Roles.ToList().Where(s => s.Id == role.Id).First();
+            var sha1 = SHA1.Create();// SHA1CryptoServiceProvider();
+            var shaPass = sha1.ComputeHash(Encoding.Unicode.GetBytes(user.Password));
+            user.Password = Encoding.Unicode.GetString(shaPass);
             db.Users.Add(user);
             db.SaveChanges();
             user = db.Users.Include(p => p.Roles).ToList().Where(p => p.Email == user.Email).First();

@@ -16,7 +16,18 @@ namespace GreenTeam.Service.Realization
         public async void Create(User user, int roleId)
         {
             var role = await _roleRepository.Get(roleId);
-            _userRepository.Create(user, role);
+            var users = await _userRepository.GetAll();
+            bool metkaEmail = false;
+            foreach (var item in users)
+            {
+                if (item.Email == user.Email)
+                {
+                    metkaEmail = true; break;
+                }
+            }
+            if (!metkaEmail) {
+                _userRepository.Create(user, role);
+            }
         }
 
         public void Delete(int id)

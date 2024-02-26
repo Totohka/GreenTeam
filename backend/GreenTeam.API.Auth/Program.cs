@@ -1,5 +1,11 @@
+using Goods.System.Social.Network.DAL.Repository.Realization;
+using GreenTeam.DAL.Repositories.Interface;
+using GreenTeam.DAL;
 using GreenTeam.Model.Entities;
+using GreenTeam.Service.Interface;
+using GreenTeam.Service.Realization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -33,6 +39,13 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+
+builder.Services.AddDbContext<ShopContext>(options =>
+               options.UseSqlServer(builder.Configuration.GetConnectionString("ShopConnection")).EnableSensitiveDataLogging(), optionsLifetime: ServiceLifetime.Singleton);
+builder.Services.AddDbContextFactory<ShopContext>();
+builder.Services.AddScoped<IJWTService, JWTService>();
+builder.Services.AddScoped<IRepository<Role>, Repository<Role>>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -1,4 +1,5 @@
 using GreenTeam.Model.Entities;
+using GreenTeam.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -13,12 +14,14 @@ namespace GreenTeam.API.Auth.Controllers
     public class AuthController : Controller
     {
         private readonly JWTSettings _options;
-        public AuthController(IOptions<JWTSettings> optAccess)
+        private readonly IJWTService _jwtService;
+        public AuthController(IOptions<JWTSettings> optAccess, IJWTService jwtService)
         {
             _options = optAccess.Value;
+            _jwtService = jwtService;
         }
 
-        [HttpGet]
+        [HttpGet("GetToken")]
         public string GetToken()
         {
             List<Claim> claims = new List<Claim>
@@ -38,6 +41,18 @@ namespace GreenTeam.API.Auth.Controllers
                 signingCredentials: new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256)
              );
             return new JwtSecurityTokenHandler().WriteToken(jwt);
+        }
+
+        [HttpGet]
+        public async Task<string> Auth(string email, string password)
+        {
+            return await _jwtService.Auth(email, password);
+        }
+
+        [HttpPost]
+        public async Task<string> Registration(User user)
+        {
+            return await _jwtService.Registration(user);
         }
     }
 }
