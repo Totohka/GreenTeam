@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const choiceSlice = createSlice({
-    name: 'count',
+    name: 'choices',
     initialState: {
         img: "",
         name: "",
