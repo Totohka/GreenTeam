@@ -19,15 +19,17 @@ function Login (props) {
 
     const handleSubmit = async (e) => {
       e.preventDefault();
-      await axios.get('http://localhost:5152/Auth', { params: { email: email, password: pass}}).then(
+      await axios.get('http://10.3.227.50:8082/Auth', { params: { email: email, password: pass}}).then(
         res => {
           const token = res.data
-          props.setAccessTokenUser("Bearer " + token);  
+          console.log("Токен ",token);
+          // props.setAccessTokenUser("Bearer " + token);  
           const user = jwtDecode(token);
-          props.setAccoutSetting(user);
+          console.log("Инфа о пользователе ", user);
+          // props.setAccoutSetting(user);
         }
       )
-      navigate("/profile");
+      // navigate("/profile");
     }
     return (
         <div className="login-main main-block"> 
