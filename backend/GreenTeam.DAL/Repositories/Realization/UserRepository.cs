@@ -31,7 +31,7 @@ namespace Goods.System.Social.Network.DAL.Repository.Realization
         public async Task<List<User>> GetAll()
         {
             using var db = _contextFactory.CreateDbContext();
-            return await db.Set<User>().ToListAsync();
+            return await db.Set<User>().Include(p => p.Roles).ToListAsync();
         }
         public void Create(User user, Role role)
         {

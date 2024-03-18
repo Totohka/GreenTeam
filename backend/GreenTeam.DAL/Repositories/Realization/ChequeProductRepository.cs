@@ -38,8 +38,7 @@ namespace Goods.System.Social.Network.DAL.Repository.Realization
         public async Task<List<ChequeProduct>> GetByChequeId(int chequeId)
         {
             using var db = _contextFactory.CreateDbContext();
-            var list = await db.ChequeProducts.ToListAsync();
-            return list.Where(cp => cp.ChequeId == chequeId).ToList();
+            return await db.ChequeProducts.Where(cp => cp.ChequeId == chequeId).ToListAsync();
         }
 
         public void Update(ChequeProduct item)

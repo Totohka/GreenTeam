@@ -1,0 +1,17 @@
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\bin\Release\net7.0\GreenTeam.DAL.deps.json
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\bin\Release\net7.0\GreenTeam.DAL.runtimeconfig.json
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\bin\Release\net7.0\GreenTeam.DAL.dll
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\bin\Release\net7.0\GreenTeam.DAL.pdb
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\bin\Release\net7.0\GreenTeam.Model.dll
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\bin\Release\net7.0\GreenTeam.Model.pdb
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\obj\Release\net7.0\GreenTeam.DAL.csproj.AssemblyReference.cache
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\obj\Release\net7.0\GreenTeam.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\obj\Release\net7.0\GreenTeam.DAL.AssemblyInfoInputs.cache
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\obj\Release\net7.0\GreenTeam.DAL.AssemblyInfo.cs
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\obj\Release\net7.0\GreenTeam.DAL.csproj.CoreCompileInputs.cache
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\obj\Release\net7.0\GreenTeam.DAL.csproj.CopyComplete
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\obj\Release\net7.0\GreenTeam.DAL.dll
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\obj\Release\net7.0\refint\GreenTeam.DAL.dll
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\obj\Release\net7.0\GreenTeam.DAL.pdb
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\obj\Release\net7.0\GreenTeam.DAL.genruntimeconfig.cache
+C:\Users\димон\Desktop\Я\учёба\repGreenTeam\GreenTeam\backend\GreenTeam.DAL\obj\Release\net7.0\ref\GreenTeam.DAL.dll

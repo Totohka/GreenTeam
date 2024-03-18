@@ -39,7 +39,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return Ok();
         }
 
-        [Authorize(Roles = "1C")]
+        [Authorize(Roles = "1C,Admin")]
         [HttpPut]
         public OkResult Update(Cheque cheque)
         {

@@ -31,15 +31,15 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return paths;
         }
 
-        [Authorize(Roles = "1C")]
+        [Authorize(Roles = "1C,Admin")]
         [HttpPost]
-        public OkResult Create([FromForm] FileCreateViewModel fileCreateViewModel)
+        public async Task<OkResult> Create([FromForm] FileCreateViewModel fileCreateViewModel)
         {
-            _fileService.Create(fileCreateViewModel);
+            await _fileService.Create(fileCreateViewModel);
             return Ok();
         }
 
-        [Authorize(Roles = "1C")]
+        [Authorize(Roles = "1C,Admin")]
         [HttpPut]
         public OkResult Update([FromForm] FileCreateViewModel fileCreateViewModel)
         {
@@ -47,7 +47,7 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
             return Ok();
         }
 
-        [Authorize(Roles = "1C")]
+        [Authorize(Roles = "1C,Admin")]
         [HttpDelete]
         public OkResult Delete(int chequeId, int userId)
         {

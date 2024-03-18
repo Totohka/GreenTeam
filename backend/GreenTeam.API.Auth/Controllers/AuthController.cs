@@ -20,7 +20,7 @@ namespace GreenTeam.API.Auth.Controllers
             _options = optAccess.Value;
             _jwtService = jwtService;
         }
-
+        
         [HttpGet("GetToken")]
         public string GetToken()
         {

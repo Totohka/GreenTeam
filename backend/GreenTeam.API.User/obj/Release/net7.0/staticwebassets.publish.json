@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "tEICsqCCE6anvxgFZrOWYCsFEJ7lockgVdQ7sTfF4dc=",
+  "Source": "GreenTeam.API.User",
+  "BasePath": "_content/GreenTeam.API.User",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

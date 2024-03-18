@@ -7,7 +7,7 @@ namespace GreenTeam.Service.Interface
     {
         public Task<string> Get(int id);
         public List<string> GetByUserId(int userId);
-        public void Create(FileCreateViewModel fileCreateViewModel);
+        public Task Create(FileCreateViewModel fileCreateViewModel);
         public void Delete(int chequeId, int userId);
         public void Update(FileCreateViewModel fileCreateViewModel);
     }

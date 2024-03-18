@@ -14,7 +14,7 @@ namespace Goods.System.Social.Network.DAL.Repository.Realization
             _contextFactory = dbContextFactory;
         }
 
-        public async void Create(IFormFile file, int userId, int chequeId)
+        public async Task Create(IFormFile file, int userId, int chequeId)
         {
             var uploadPath = $"{Directory.GetCurrentDirectory()}/Cheques/{userId}";
             if (!Directory.Exists(uploadPath))

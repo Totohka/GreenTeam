@@ -12,9 +12,9 @@ namespace GreenTeam.Service.Realization
             _fileRepository = fileRepository;
         }
 
-        public void Create(FileCreateViewModel fileCreateViewModel)
+        public async Task Create(FileCreateViewModel fileCreateViewModel)
         {
-            _fileRepository.Create(fileCreateViewModel.File, fileCreateViewModel.User_id, fileCreateViewModel.Cheque_id);
+            await _fileRepository.Create(fileCreateViewModel.File, fileCreateViewModel.User_id, fileCreateViewModel.Cheque_id);
         }
 
         public void Delete(int chequeId, int userId)

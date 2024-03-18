@@ -67,10 +67,12 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseDeveloperExceptionPage();
+app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 app.UseFileServer(new FileServerOptions
 {
     FileProvider = new PhysicalFileProvider(
-           Path.Combine(builder.Environment.ContentRootPath, "Products")),
+           Path.Combine(Directory.GetCurrentDirectory(), "Products")),
     RequestPath = "/Products",
     EnableDirectoryBrowsing = true,
 });

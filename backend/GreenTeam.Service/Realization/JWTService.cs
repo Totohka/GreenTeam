@@ -76,7 +76,7 @@ namespace GreenTeam.Service.Realization
 
             var sha1 = SHA1.Create();
             var shaPass = sha1.ComputeHash(Encoding.Unicode.GetBytes(password));
-            if (user.Password == Encoding.Unicode.GetString(shaPass))
+            if (user is not null && user.Password == Encoding.Unicode.GetString(shaPass))
             {
                 return GetJWT(user);
             }

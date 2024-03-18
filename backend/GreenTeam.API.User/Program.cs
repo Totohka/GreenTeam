@@ -43,8 +43,10 @@ builder.Services.AddDbContext<ShopContext>(options =>
 builder.Services.AddDbContextFactory<ShopContext>();
 builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IChequeProductService, ChequeProductService>();
 builder.Services.AddScoped<IChequeService, ChequeService>();
 builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddScoped<IChequeProductRepository, ChequeProductRepository>();
 builder.Services.AddScoped<IRepository<Role>, Repository<Role>>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IChequeRepository, ChequeRepository>();
@@ -67,10 +69,11 @@ app.UseHttpsRedirection();
 app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseDeveloperExceptionPage();
 app.UseFileServer(new FileServerOptions
 {
     FileProvider = new PhysicalFileProvider(
-           Path.Combine(builder.Environment.ContentRootPath, "Cheques")),
+           Path.Combine(Directory.GetCurrentDirectory(), "Cheques")),
     RequestPath = "/Cheques",
     EnableDirectoryBrowsing = true,
 });
