@@ -13,7 +13,7 @@ function Header(props) {
             <p className="subtitle">Special for you</p>
           </NavLink>
           <div className='buttons-rigth'>
-            <img src={profile} className='user-button'/>
+            <NavLink to="/login"><img src={profile} className='user-button'/></NavLink>
             <NavLink to="/bin"><img src={bin} className='bin-button'/></NavLink>
           </div>
       </header>
