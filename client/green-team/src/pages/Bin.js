@@ -1,30 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
-import { decrementCount, incrementCount } from "../store/binSlice";
-
-const Choice = ({ item }) => {
-    const dispatch = useDispatch();
-    return (
-        <div className="choice">
-            <p>{item.name}</p>
-            <p>{item.count}</p>
-            <p>{item.subsum}</p>
-            <div>
-                <button
-                aria-label="Increment value"
-                onClick={() => dispatch(incrementCount(item.id))}
-                >
-                +
-                </button>
-                <span>{item.count}</span>
-                <button
-                aria-label="Decrement value"
-                onClick={() => dispatch(decrementCount(item.id))}
-                >
-                -
-                </button>
-            </div>
-        </div>
-    )}
+import { useSelector } from "react-redux";
+import Choice from "../widgets/Choice/Choice";
+import "./Bin.css";
 
 function Bin(){
     const items = useSelector(state=>state.bin.items);
@@ -36,9 +12,19 @@ function Bin(){
     console.log(choices);
     let summ = useSelector(state=>state.bin.summ);
     return(
-        <div>
-            {choices}
-            <h1>{summ}</h1>
+        <div className="bin">
+            <div className="choices">
+                {choices}
+            </div>
+            <div className="endsumm">
+                <div className="address">Адрес доставки</div>
+                <div className="h-summ">
+                    <p>Итого</p>
+                    <h1>{summ} ₽</h1>
+                </div>
+                <div className="buttom-buy">Заказать</div>
+            </div>
+            
         </div>
     );
 }

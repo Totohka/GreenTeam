@@ -8,7 +8,7 @@ function Header(props) {
     return (
       <header>
           <img src={menu} className='menu-button'/>
-          <NavLink className='title'to="/catalog">
+          <NavLink className='title'to="/">
             <p>Store</p>
             <p className="subtitle">Special for you</p>
           </NavLink>

@@ -15,8 +15,18 @@ export const binSlice = createSlice({
             state.items=state.items.concat(item);
             state.summ+=item.price;
         },
+        removeItemFromBin:(state, action)=>{
+            const id = action.payload;
+            state.items=state.items.map((item)=>{
+                if (item.id==id){
+                    state.summ-=item.subsum;
+                }
+                return item;
+            })
+            state.items=state.items.filter((item)=>item.id!=id);
+        },
         incrementCount: (state, action) => {
-            let id= action.payload;
+            const id= action.payload;
             state.items=state.items.map((item)=>{
                 if (item.id==id){
                     item.count+=1;
@@ -27,7 +37,7 @@ export const binSlice = createSlice({
             })
         },
         decrementCount: (state,action)=>{
-            let id= action.payload;
+            const id= action.payload;
             state.items=state.items.map((item)=>{
                 if (item.id==id && item.count!=1){
                     item.count-=1;
@@ -39,5 +49,5 @@ export const binSlice = createSlice({
         },
     }
 })
-export const {addItemToBin, incrementCount, decrementCount} = binSlice.actions;
+export const {addItemToBin, incrementCount, decrementCount, removeItemFromBin} = binSlice.actions;
 export default binSlice.reducer;
