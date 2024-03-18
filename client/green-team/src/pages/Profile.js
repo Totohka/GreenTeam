@@ -1,5 +1,5 @@
 //import Headers from "../widgets/Header/Header"
-
+import "./Profile.css";
 
 function Profile () {
     return (
