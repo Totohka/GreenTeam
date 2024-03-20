@@ -6,6 +6,7 @@ import Bin from "../pages/Bin";
 import Profile from "../pages/Profile";
 import Registration from "../pages/Registration";
 import Login from "../pages/Login";
+import AboutUs from "../pages/AboutUs";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/profile" element={<Profile />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/registration" element={<Registration />}></Route>
+        <Route path="/about" element={<AboutUs />}></Route>
       </Routes>
       </div>
       
