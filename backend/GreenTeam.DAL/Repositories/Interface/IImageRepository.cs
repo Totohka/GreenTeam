@@ -5,10 +5,10 @@ namespace GreenTeam.DAL.Repositories.Interface
 {
     public interface IImageRepository
     {
-        string Get(int productId);
+        List<string> Get(int productId);
         List<string> GetAll();
-        void Create(IFormFile file, int productId);
-        void Update(IFormFile file, int productId);
-        void Delete(int productId);
+        Task Create(IFormFile file, int productId);
+        Task Update(IFormFile file, int productId, int photoId);
+        Task Delete(int productId, int photoId);
     }
 }

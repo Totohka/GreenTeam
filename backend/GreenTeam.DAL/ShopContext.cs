@@ -1,6 +1,7 @@
 ﻿using GreenTeam.Model.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.Identity.Client;
 
 namespace GreenTeam.DAL
 {
@@ -14,6 +15,7 @@ namespace GreenTeam.DAL
         public DbSet<Cheque> Cheques { get; set; }
         public DbSet<ChequeProduct> ChequeProducts { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<Photo> Photos { get; set; }
 
         protected override void ConfigureConventions(ModelConfigurationBuilder builder)
         {
@@ -29,6 +31,13 @@ namespace GreenTeam.DAL
             modelBuilder.Entity<Cheque>(ChequeConfigure);
             modelBuilder.Entity<ChequeProduct>(ChequeProductConfigure);
             modelBuilder.Entity<Supplier>(SupplierConfigure);
+            modelBuilder.Entity<Photo>(PhotoConfigure);
+        }
+        public void PhotoConfigure(EntityTypeBuilder<Photo> builder)
+        {
+            builder.HasKey(p => p.Id);
+            builder.Property(p => p.ProductId).IsRequired();
+            builder.Property(p => p.Path).IsRequired().HasMaxLength(50);
         }
         public void CategoryConfigure(EntityTypeBuilder<Category> builder)
         {
@@ -74,6 +83,9 @@ namespace GreenTeam.DAL
             builder.Property(p => p.Date).IsRequired();
             builder.Property(p => p.Path).IsRequired().HasMaxLength(50);
             builder.Property(p => p.UserId).IsRequired();
+            builder.Property(p => p.DeliveryAddress).IsRequired().HasMaxLength(200);
+            builder.Property(p => p.IsPay).IsRequired();
+            builder.Property(p => p.IsPrint).IsRequired();
         }
         public void ChequeProductConfigure(EntityTypeBuilder<ChequeProduct> builder)
         {

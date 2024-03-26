@@ -56,6 +56,17 @@ namespace GreenTeam.DAL.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("DeliveryAddress")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<bool>("IsPay")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsPrint")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Path")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -95,6 +106,29 @@ namespace GreenTeam.DAL.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("ChequeProducts");
+                });
+
+            modelBuilder.Entity("GreenTeam.Model.Entities.Photo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Path")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Photos");
                 });
 
             modelBuilder.Entity("GreenTeam.Model.Entities.Product", b =>
@@ -269,6 +303,17 @@ namespace GreenTeam.DAL.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("GreenTeam.Model.Entities.Photo", b =>
+                {
+                    b.HasOne("GreenTeam.Model.Entities.Product", "Product")
+                        .WithMany("Photos")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("GreenTeam.Model.Entities.Product", b =>
                 {
                     b.HasOne("GreenTeam.Model.Entities.Category", "Category")
@@ -316,6 +361,8 @@ namespace GreenTeam.DAL.Migrations
             modelBuilder.Entity("GreenTeam.Model.Entities.Product", b =>
                 {
                     b.Navigation("ChequeProducts");
+
+                    b.Navigation("Photos");
                 });
 
             modelBuilder.Entity("GreenTeam.Model.Entities.Supplier", b =>

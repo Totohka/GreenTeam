@@ -14,5 +14,6 @@ namespace GreenTeam.Model.Entities
         public int CategoryId { get; set; }
         public Category? Category { get; set; }
         public List<ChequeProduct>? ChequeProducts { get; set; }
+        public List<Photo>? Photos { get; set; }
     }
 }

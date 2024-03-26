@@ -4,10 +4,10 @@ namespace GreenTeam.Service.Interface
 {
     public interface IImageService
     {
-        public string Get(int id);
+        public List<string> Get(int productId);
         public List<string> GetAll();
-        public void Create(ImageCreateViewModel imageCreateViewModel);
-        public void Delete(int productId);
-        public void Update(ImageCreateViewModel imageCreateViewModel);
+        public Task Create(ImageCreateViewModel imageCreateViewModel);
+        public Task Delete(int productId, int photoId);
+        public Task Update(ImageUpdateViewModel imageUpdateViewModel);
     }
 }

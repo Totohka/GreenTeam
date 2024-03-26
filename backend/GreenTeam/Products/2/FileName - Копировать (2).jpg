@@ -1,0 +1,6 @@
+﻿namespace GreenTeam.API.Product.Products._2
+{
+    public class FileName
+    {
+    }
+}

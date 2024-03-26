@@ -16,14 +16,14 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
         }
 
         [HttpGet]
-        public string Get(int productId)
+        public List<string> Get(int productId)
         {
             var path = _imageService.Get(productId);
             return path;
         }
 
         [HttpGet("all")]
-        public List<string> GetAll()
+        public List<string> GetAllFirstPhoto()
         {
             var paths = _imageService.GetAll();
             return paths;
@@ -31,25 +31,25 @@ namespace Goods.System.Social.Network.Microservice.Posts.Controllers
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public OkResult Create([FromForm] ImageCreateViewModel imageCreateViewModel)
+        public async Task<OkResult> Create([FromForm] ImageCreateViewModel imageCreateViewModel)
         {
-            _imageService.Create(imageCreateViewModel);
+            await _imageService.Create(imageCreateViewModel);
             return Ok();
         }
 
         [Authorize(Roles = "Admin")]
         [HttpPut]
-        public OkResult Update([FromForm] ImageCreateViewModel imageCreateViewModel)
+        public async Task<OkResult> Update([FromForm] ImageUpdateViewModel imageUpdateViewModel)
         {
-            _imageService.Update(imageCreateViewModel);
+            await _imageService.Update(imageUpdateViewModel);
             return Ok();
         }
 
         [Authorize(Roles = "Admin")]
         [HttpDelete]
-        public OkResult Delete(int productId)
+        public async Task<OkResult> Delete(int productId, int photoId)
         {
-            _imageService.Delete(productId);
+            await _imageService.Delete(productId, photoId);
             return Ok();
         }
     }

@@ -12,19 +12,19 @@ namespace GreenTeam.Service.Realization
             _imageRepository = imageRepository;
         }
 
-        public void Create(ImageCreateViewModel imageCreateViewModel)
+        public async Task Create(ImageCreateViewModel imageCreateViewModel)
         {
-            _imageRepository.Create(imageCreateViewModel.Image, imageCreateViewModel.Product_id);
+            await _imageRepository.Create(imageCreateViewModel.Image, imageCreateViewModel.Product_id);
         }
 
-        public void Delete(int productId)
+        public async Task Delete(int productId, int photoId)
         {
-            _imageRepository.Delete(productId);
+            await _imageRepository.Delete(productId, photoId);
         }
 
-        public string Get(int id)
+        public List<string> Get(int productId)
         {
-            return _imageRepository.Get(id);
+            return _imageRepository.Get(productId);
         }
 
         public List<string> GetAll()
@@ -32,9 +32,9 @@ namespace GreenTeam.Service.Realization
             return _imageRepository.GetAll();
         }
 
-        public void Update(ImageCreateViewModel imageCreateViewModel)
+        public async Task Update(ImageUpdateViewModel imageUpdateViewModel)
         {
-            _imageRepository.Update(imageCreateViewModel.Image, imageCreateViewModel.Product_id);
+            await _imageRepository.Update(imageUpdateViewModel.Image, imageUpdateViewModel.Product_id, imageUpdateViewModel.Photo_id);
         }
     }
 }

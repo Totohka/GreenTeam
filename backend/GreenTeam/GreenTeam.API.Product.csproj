@@ -7,6 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Products\2\FileName - Копировать (2).jpg" />
+    <None Remove="Products\2\FileName - Копировать.jpg" />
+    <None Remove="Products\2\FileName.jpg" />
+    <None Remove="Products\3\FileName.jpg" />
+    <None Remove="Products\4\FileName - Копировать.jpg" />
+    <None Remove="Products\4\FileName.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Products\2\FileName - Копировать (2).jpg" />
+    <Compile Include="Products\2\FileName - Копировать.jpg" />
+    <Compile Include="Products\2\FileName.jpg" />
+    <Compile Include="Products\3\FileName.jpg" />
+    <Compile Include="Products\4\FileName - Копировать.jpg" />
+    <Compile Include="Products\4\FileName.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.16" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.15" />
@@ -24,10 +42,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GreenTeam.Service\GreenTeam.Service.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Products\" />
   </ItemGroup>
 
 </Project>
