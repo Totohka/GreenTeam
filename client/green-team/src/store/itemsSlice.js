@@ -4,11 +4,13 @@ import axios from "axios";
 export const getAllItems = createAsyncThunk(
     'items/getAllItems',
     async () => {
-        let response = await axios.get("http://10.3.227.50:8083/api/Product/all");//8082/token 8084/user /192.168.0.15:8083/Prod localhost:5067
+        const response = await axios.get("http://25.32.11.98:8083/api/Product/all");//8082/token 8084/user /192.168.0.15:8083/Prod localhost:5067
         console.log ("Taken response", response);
         return response.data
     }
 )
+
+
 
 
 export const itemsSlice = createSlice({
@@ -37,6 +39,7 @@ export const itemsSlice = createSlice({
             state.status = 'failed'
             state.error = action.error.message
           })
+          
     }
 })
 export const {setItems} = itemsSlice.actions;

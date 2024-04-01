@@ -28,6 +28,7 @@
 }
 .address{
     width: 70%;
+    border: none;
     background: rgba(213, 169, 169, 1);
     border-radius: 20px;
     padding: 5px 20px;

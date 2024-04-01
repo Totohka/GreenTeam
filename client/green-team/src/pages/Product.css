@@ -1,0 +1,116 @@
+.product{
+    width: 100%;
+    padding-top: 105px;
+    display: flex;
+    justify-content: center;
+}
+.all-photos{
+    width: 8%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.all-photos img{
+    width: 100%;
+    max-width: 130px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+.all-photos img:hover{
+    border: 1px solid rgba(233, 233, 233, 1);
+    background: #000;
+	opacity: 0.6;
+}
+.main-photo{
+    width: 40%;
+    height: 600px;
+    margin-left: 40px;
+    border-radius: 20px;
+    background-color: grey;
+}
+.main-photo img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.prod-info{
+    width: 36%;
+    border: 1px solid rgba(233, 233, 233, 1);
+    background: rgba(252, 252, 252, 1);
+    height: 400px;
+    border-radius: 40px;
+    margin-left: 40px;
+}
+.prod-name{
+    /* font-family: Amiko; */
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26.68px;
+    text-align: left;
+    margin-top: 60px;
+    margin-left: 60px;
+
+}
+.prod-price{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26.68px;
+    text-align: left;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+.prod-suplier{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.34px;
+    text-align: left;
+    margin-left: 60px;
+    margin-top:20px;
+
+}
+.prod-description{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.34px;
+    text-align: left;
+    margin-left: 60px;
+    margin-top: 5px;
+}
+.add-to-bin-prod{
+    background: rgba(164, 203, 195, 1);
+    width: 30%;
+    height: 27px;
+    padding: 5px 50px;
+    border-radius: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.34px;
+}
+.add-to-bin-prod:hover{
+    background: rgba(204, 223, 219, 1);
+}
+.already-in-bin-prod{
+    background: rgba(213, 169, 169, 1);
+    width: 30%;
+    height: 27px;
+    padding: 5px 50px;
+    border-radius: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.34px;
+}
+.already-in-bin-prod:hover{
+    background: rgba(205, 147, 147, 1);
+}

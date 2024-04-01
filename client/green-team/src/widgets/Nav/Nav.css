@@ -1,0 +1,47 @@
+.nav{
+    display: none;
+    
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    margin-left: -80%;
+    margin-top: 50%;
+    opacity:0;
+    width: 20%;
+    height: 87%;
+    padding-bottom: 20px;
+    background: rgba(245, 245, 245, 1);
+    box-shadow: 40px 29px 100px 10px rgba(0, 0, 0, 0.5);
+  }
+
+.nav div{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.triggered{
+    display: flex;
+    opacity: 1;
+}
+.aboutUs{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.aboutUs button{
+    width:100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    border:none;
+    padding: 5px 5px;
+    border-radius: 10px;
+    background: rgba(213, 169, 169, 1);
+}
+.aboutUs button:hover{
+    background: rgba(205, 147, 147, 1);
+
+}

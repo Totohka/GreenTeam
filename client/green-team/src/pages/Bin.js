@@ -17,7 +17,9 @@ function Bin(){
                 {choices}
             </div>
             <div className="endsumm">
-                <div className="address">Адрес доставки</div>
+                {/* <div > */}
+                    <input className="address" placeholder="Адрес доставки"></input>
+                {/* </div> */}
                 <div className="h-summ">
                     <p>Итого</p>
                     <h1>{summ} ₽</h1>

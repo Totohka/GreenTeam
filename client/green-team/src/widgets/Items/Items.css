@@ -1,9 +1,16 @@
 .products-cards{
-    padding-top: 65px;
+    padding-top: 105px;
     width: 100%;
     padding-left: 22px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.non-content{
+    padding-top: 105px;
+    padding-left: 22px;
+    width: 100%;
+    text-align: center;
+    display: block;
 }

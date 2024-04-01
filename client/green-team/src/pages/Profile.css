@@ -1,7 +1,7 @@
 /* Страница профиля */
 
 .profile-main {
-    padding-top: 51px;
+    padding-top: 105px;
     display: flex;
     justify-content: space-around;
   }
@@ -21,41 +21,38 @@
     display: flex;
     text-align: center;
     flex-direction: column;
-    width: 691px;
+    width: 48%;
   }
   .info {
     background-color: #FCFCFC;
-    width: 691px;
-    height: 412px;
+    width: 100%;
     border-radius: 79px;   
     border: 1px;
     padding-top: 46px;
-  }
-  
-  .info p {
-    margin-top: 10px;
-    margin-bottom: 0;
+    padding-bottom: 20px;
   }
   .input-info {
-    width: 567px;
-    height: 55px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 0;
+    width: 90%;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 21px;
     border: 1px solid #E0E0E0;
     border-radius:79px;
     background-color:#F5F5F5;
-    font-family: Amiko;
     font-size: 16px;
     font-weight: 400;
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
     cursor: default;
-  
-    
   }
   
   .btn-exit {
-    width: 254px;
+    width: 37%;
     height: 38px;
     margin-top: 45px;
     padding: 9 51 9 52;
@@ -63,6 +60,9 @@
     background-color:#D5A9A9;
     border:none;
   
+  }
+  .btn-exit:hover{
+    background: rgba(205, 147, 147, 1);
   }
   
   .receipts-block {
@@ -78,10 +78,25 @@
   
   }
   .receipt {
-    width: 128px;
-    height: 172px;
+    width: 50%;
+    height: 40%;
     border-radius: 20px;
-    background-color: #D9D9D9;
     margin-bottom: 11px;
   
+  }
+  .receipt embed{
+    width:100%;
+    height:100%;
+    margin-bottom: -5px;
+  }
+  .showCheq{
+    width:100%;
+    height: 20px;
+    border-radius: 20px;
+    border: none;
+    background: rgba(164, 203, 195, 1);
+  }
+  .showCheq:hover{
+    background: rgba(204, 223, 219, 1);
+
   }

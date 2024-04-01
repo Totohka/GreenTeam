@@ -60,3 +60,9 @@ header .bin-button, .user-button, .menu-button{
 header .bin-button:hover, .user-button:hover, .menu-button:hover {
   transform: scale(1.2);
 }
+header .menu-button #nav{
+  transition:  opacity 500ms ease;
+}
+header .menu-button:hover #nav {
+  opacity: 1;
+}
