@@ -9,11 +9,13 @@ import Login from "../pages/Login";
 import AboutUs from "../pages/AboutUs";
 import Product from "../pages/Product";
 import RequireAuth from "../widgets/RequiredAuth/RequiredAuth";
+import Admin from "../widgets/Admin/Admin";
 
 
 function App() {
   return (
     <BrowserRouter>
+      <Admin></Admin>
       <Header></Header>
       <div className="content">
         <Routes>
