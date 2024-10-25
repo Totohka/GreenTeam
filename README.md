@@ -1,8 +1,8 @@
 # GreenTeam
 ```mermaid
 sequenceDiagram
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-Alice -> Bob:Another authentication Response
-Bob --> Alice: Another authentication Response
+Client --Аутентификационные данные--> AuthMicroService: Authentication Request
+AuthMicroService --> Client: Authentication Response
+Client -> AuthMicroService:Another authentication Response
+AuthMicroService --> Client: Another authentication Response
 ```
